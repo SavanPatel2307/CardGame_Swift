@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Card_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="TPm-pF-xSy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-Ei-kh2">
+                                <rect key="frame" x="90" y="50" width="234" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cAA-xC-j0h">
+                                <rect key="frame" x="78" y="363" width="258" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-DS-N4t">
+                                        <rect key="frame" x="0.0" y="0.0" width="258" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card2" translatesAutoresizingMaskIntoConstraints="NO" id="iwI-Kg-8de">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card3" translatesAutoresizingMaskIntoConstraints="NO" id="vA9-MK-dEl">
+                                                <rect key="frame" x="138" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwH-Q8-xeE">
+                                <rect key="frame" x="127" y="549" width="161" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="dealbutton"/>
+                                <connections>
+                                    <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USj-pP-i8d"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="TfY-g8-QLZ">
+                                <rect key="frame" x="20" y="751" width="90" height="81.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVS-rj-mUU">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRm-c5-ujU" userLabel="Left score">
+                                        <rect key="frame" x="0.0" y="48" width="90" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hRz-tc-KaJ">
+                                <rect key="frame" x="316" y="757" width="68" height="82.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6v-Py-hbJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <color key="textColor" red="0.53918393779999996" green="0.17610127340000001" blue="0.031814958640000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="highlightedColor" red="0.53918393782383411" green="0.1761012733805522" blue="0.031814958638414867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzo-p1-cL0">
+                                        <rect key="frame" x="0.0" y="49" width="68" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" red="0.53918393779999996" green="0.17610127340000001" blue="0.031814958640000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LeftImageView" destination="iwI-Kg-8de" id="rXM-ri-Ec2"/>
+                        <outlet property="LeftScoreLabel" destination="tRm-c5-ujU" id="WuP-fg-0uh"/>
+                        <outlet property="RightImageView" destination="vA9-MK-dEl" id="nad-qN-EPO"/>
+                        <outlet property="RightScoreLabel" destination="yzo-p1-cL0" id="GYI-qa-Po5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="card2" width="120" height="170"/>
+        <image name="card3" width="120" height="170"/>
+        <image name="dealbutton" width="82" height="31"/>
+        <image name="logo" width="122" height="67"/>
+    </resources>
+</document>
